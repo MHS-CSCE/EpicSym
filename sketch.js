@@ -1,11 +1,15 @@
+let colorlist = ['gold', 'yellow', 'turquoise', 'red']
+
 function setup() {
-  // put setup code here
-  createCanvas(400, 400);
+    
+    createCanvas(windowWidth - (windowWidth / 3), windowHeight);
+    background(205);
 }
 
 function draw() {
-  // put drawing code here
-  background(100,10,50)
+    if (mouseIsPressed == true) {
+        noStroke()
+        fill(random(colorlist));
+        ellipse(mouseX, mouseY, 25, 25);
+    }
 }
-
-console.log("helloiSF")
